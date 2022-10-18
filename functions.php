@@ -51,6 +51,7 @@ if ( ! function_exists( 'jm_custom_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'jm-custom' ),
+				'footer-menu' => esc_html__( 'Footer Menu', 'jm-custom' ),
 			)
 		);
 
@@ -201,17 +202,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function global_link(){
-	global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram_link ,$twitter_link;
-	$email = "jmciw05@gmail.com";
-	$phone_number = "(480) 933-2433";
+	global $email , $phone_number , $phone_link,$address,$address_link ,$facebook_link ,$instagram_link ,$twitter_link,$footer_content;
+	$email = get_field('email','option');
+	$phone_number = get_field('phone','option');
+	//Phone link
 	$val = array("(", ")", " ", "-", ".");
 	$replace = array("", "", "", "", "");
-	//Phone link
 	$phone_link = str_replace($val, $replace, $phone_number);	
-	$address = "1035 E. Curry Rd. Tempe, AZ 85281";
-	$facebook_link = "https://www.facebook.com/JMCustomIronWorkLLC";		
-	$instagram_link = "https://www.instagram.com/jm_customironwork/";		
-	$twitter_link = "https://twitter.com/JMCustomiron";		
+
+	$address = get_field('address','option');
+	$address_link = get_field('address_link','option');
+
+	$facebook_link = get_field('facebook_link','option');		
+	$instagram_link = get_field('instagram_link','option');		
+	$twitter_link = get_field('twitter_link','option');		
+
+	$footer_content = get_field('footer_content','option');		
 }
 add_action('init','global_link');
 
@@ -229,6 +235,19 @@ function change_html_custom_logo() {
         );
     return $html;   
 }
+
+// it's working only menu custom link and link have started with #
+function change_menu_URL($items){
+	if(!is_front_page()){
+		foreach ($items as $key => $item) {
+			if ($item->object == 'custom' && substr($item->url, 0, 1) == '#') {
+				$item->url = site_url() . $item->url;
+			}
+		}
+	}
+	return $items;
+}
+add_filter('wp_nav_menu_objects', 'change_menu_URL');
 
 function custom_testimonials_post() {
 	$labels = array(

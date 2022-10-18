@@ -1,27 +1,27 @@
-<?php 
-global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram_link ,$twitter_link;
+<?php
+global $email, $phone_number, $phone_link, $address, $facebook_link, $instagram_link, $twitter_link;
 ?>
-<section class="main-banner" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2021/03/main-banner-bg.jpg');">
+<section class="main-banner" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/10/main-banner-bg.jpg');">
     <div class="sec-wp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="banner-text white-text">
-                        <div class="banner-pattern pattern"></div>
-                        <h1 class="h1-title wow left-animation" data-wow-duration="1s">Great Work Speaks For Itself</h1>
-                        <h5 class="h5-title wow left-animation" data-wow-duration="1s" data-wow-delay="0.2s">Custom Ornamental Iron for Your Home & Business </h5>
-                        <div class="banner-btn wow left-animation" data-wow-duration="1s" data-wow-delay="0.3s">
-                            <a title="Get an Estimate" href="javascript:void(0);" class="sec-btn" data-toggle="modal" data-target="#getEstimate">Get an Estimate</a>
-                            <a title="Call <?php echo $phone_number; ?>" href="tel:<?php echo $phone_link; ?>" class="sec-btn outline-btn white-btn">Call <span class="for-des">&nbsp;<?php echo $phone_number; ?></span> <span class="for-mob"> &nbsp;Us Now</span> </a>
+                        <!-- <div class="banner-pattern pattern"></div> -->
+                        <h1 class="h1-title wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">Fencing from Concept to Installation</h1>
+                        <p class="wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s">Your Local Fencing Specialist</p>
+                        <div class="banner-btn">
+                            <a href="#" class="sec-btn wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.4s" title="(615) 624-7709">call &nbsp;<sapn class="callus">(615) 624-7709</sapn></a>
+                            <a href="#" class="sec-btn banner-contact-btn wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.5s" title="Contact Us">Contact Us <span><img src="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/images/right-arrow.svg" width="19" height="19" alt="Right Arrow"></span></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="banner-img-wp">
-                        <div class="banner-img-pattern pattern wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-                        <div class="banner-img wow left-animation" data-wow-duration="1s" data-wow-delay="0.2s" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/main-banner-img-1.jpg);"></div>
-                        <div class="banner-img wow left-animation" data-wow-duration="1s" data-wow-delay="0.3s" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/main-banner-img-2.jpg);"></div>
+                        <div class="banner-img-pattern pattern wow fadeIn" data-wow-duration="0.8s" data-wow-delay="1s"></div>
+                        <div class="banner-img wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.6s" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2022/10/main-banner-img-1.jpg);"></div>
+                        <div class="banner-img wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.7s" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2022/10/main-banner-img-2.jpg);"></div>
                     </div>
                 </div>
             </div>
@@ -35,54 +35,23 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-text wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <h2 class="h2-title">About Us</h2>
-                        <p>With forty years of experience in the business, JM Custom Iron Work builds and installs quality spiral staircases, security doors, yard gates, fencing, and more. All the ironwork we produce across Arizona and beyond is custom-fabricated to your specification by our talented team of professional craftsmen. Each piece is unique, a work of art adding to the value of your property.</p>
-                        <p>If you have a design in mind for your residence or place of business, you can reach us at <?php echo $phone_number; ?> for a free over-the-phone estimate. If still contemplating the kind of ironwork your property requires, feel free to consult our experts. Juan Morales and the JM Custom Iron Work team are dedicated to helping you find a product that fits your style and your budget.</p>
+                        <h3 class="h3-title">About Us</h3>
+                        <div class="about-sub-title">
+                            <p>Your Local Fencing Specialist</p>
+                        </div>
+                        <p>Fencing is one of the top home improvement projects people choose to do. It can play a direct role in enhancing your property value and safety.</p>
+                        <p>At Jacobs Fencing, we understand that every customer is looking for something different. We’re a fencing contractor focusing on customer service and quality installation techniques, dedicated to providing you with a fence that fits your budget, style, and needs. Our services include new fence installations that will last for years to come and repair services that exceed expectations.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-img-wp wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="about-pattern pattern"></div>
                         <div class="about-slider">
-                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/03/about-slider-img-1.jpg);"></div>
-                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/03/about-slider-img-2.jpg);"></div>
-                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/about-slider-img-new-3.jpg);"></div>
-                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/03/about-slider-img-4.jpg);"></div>
-                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/03/about-slider-img-5.jpg);"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-ser-row">
-                <div class="row">
-                    <div class="col-lg-6 order-2 order-lg-1">
-                        <div class="about-ser-img-wp wow right-animation" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <div class="about-ser-pattern pattern"></div>
-                            <div class="about-ser-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/03/our-promise-img-1.jpg);"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2">
-                        <div class="about-ser-text wow left-animation" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <h2 class="h2-title">Our Promise To You</h2>
-                            <p>At JM Custom Iron Work, we strive to be flawless when it comes to custom iron fabrication. When we discuss your vision for a spiral staircase, or other ornamental iron piece, you can ensure it will be created with the highest quality and attention to detail.</p>
-                            <div class="about-box-wp">
-                                <div class="about-box">
-                                    <img src="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/images/custom-project-icon.svg" data-no-lazy="1" alt="custom project icon">
-                                    <h6>Fully Custom <span>Projects</span></h6>
-                                </div>
-                                <div class="about-box">
-                                    <img src="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/images/experience-icom.svg" data-no-lazy="1" alt="experience icom">
-                                    <h6>Over 40 Years <span>of Experience</span></h6>
-                                </div>
-                                <div class="about-box">
-                                    <img src="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/images/phone-estimate-icon.svg" data-no-lazy="1" alt="phone estimate icon">
-                                    <h6>Free Over the Phone <span> Estimates</span></h6>
-                                </div>
-                                <div class="about-box">
-                                    <img src="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/images/family-owned-icon.svg" data-no-lazy="1" alt="family owned icon">
-                                    <h6>Family Owned <span>& Operated</span></h6>
-                                </div>
-                            </div>
+                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2022/10/about-slider-img-1.jpg);"></div>
+                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2022/10/about-slider-img-1.jpg);"></div>
+                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2022/10/about-slider-img-1.jpg);"></div>
+                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2022/10/about-slider-img-1.jpg);"></div>
+                            <div class="about-slider-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2022/10/about-slider-img-1.jpg);"></div>
                         </div>
                     </div>
                 </div>
@@ -92,31 +61,57 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
 </section>
 <!-- end of About Sec -->
 
-<section class="home-featured-work" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2021/03/main-banner-bg.jpg')">
-    <div class="sec-wp">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="home-featured-work-text wow right-animation" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <h6 class="sub-title">Featured Work</h6>
-                        <h2 class="h2-title">Spiral Staircases</h2>
-                        <p>JM Custom Iron Work, your go-to source for quality ironwork in the greater Phoenix metro area, specializes in spiral staircases. Whether you’re going for pure functionality or something more rustic and ornamental, we can make it work. Every piece is custom-fabricated, and uniquely beautiful designs are the standard we’ve set for ourselves. We also offer powder coating for that special finishing touch. Choose from hundreds of colors to make that staircase stand out or blend perfectly with the rest of the structure, according to style preference.</p>
-                        <a title="Learn More" href="<?php echo get_permalink(36); ?>" class="sec-btn outline-btn">Learn More</a>
+<div class="service-sec">
+    <div class="sec-title text-center">
+        <h2 class="h2-title">services</h2>
+    </div>
+    <div class="services-wp">
+        <section class="service-main">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="service-content">
+                            <h3 class="h3-title">Residential Fence</h3>
+                            <div class="white-text">
+                                <p>We have a variety of residential fencing options that compliments the style and landscape of your home. Your specialists at Jacobs Fencing will understand your vision and build a fence that works for your residential space, needs, and aesthetics.</p>
+                            </div>
+                            <a href="#" class="learn-more" title="Learn More">Learn More <span><img src="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/images/right-arrow-2.svg" width="19" height="19" alt="Right Arrow"></span></a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="home-featured-work-img-wp wow left-animation" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="home-featured-work-pattern pattern"></div>
-                        <div class="home-featured-work-img" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/03/featured-work-img.jpg)"></div>
+                    <div class="col-lg-5">
+                        <div class="service-img">
+                            <div class="about-pattern pattern"></div>
+                            <div class="back-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/10/residential-main.jpg');"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="service-main">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="service-img">
+                            <div class="about-pattern pattern"></div>
+                            <div class="back-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/10/commercial-main.jpg');"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="service-content">
+                            <h3 class="h3-title">Commercial Fence</h3>
+                            <div class="white-text">
+                                <P>If you are operating a business and worry about the threat of theft, vandalism, or intentional damage to valuable items, then you’ve come to the right place. At Jacobs Fencing we work with you to protect your premises while improving property privacy and/or visibility.</P>
+                            </div>
+                            <a href="#" class="learn-more" title="Learn More">Learn More <span><img src="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/images/right-arrow-2.svg" width="19" height="19" alt="Right Arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</section><!-- end of Home Featured Work -->
+</div>
 
-<section class="work-sec" >
+<section class="work-sec">
     <div class="sec-wp">
         <div class="container">
             <div class="row">
@@ -132,13 +127,10 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
                 </div>
             </div>
         </div>
-
-
-
         <div class="other-work-slider">
             <div class="work-main-wp">
-                <div class="work-main-content" title="Courtyard Gates" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/JM_OtherWork_CourtyardGates_New.jpg);"></div>
-                <div class="container">
+                <div class="work-main-content" title="Courtyard Gates" style="background-image: url(<?php echo home_url(); ?>//wp-content/uploads/2022/10/ornamental-Iron.jpg);"></div>
+                <!-- <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="work-slider-box white-text">
@@ -149,12 +141,12 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="work-main-wp">
-                <div class="work-main-content" title="Yard Gates" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/JM_OtherWork_YardGates_New.jpg);"></div>
-                <div class="container">
+                <div class="work-main-content" title="Yard Gates" style="background-image: url(<?php echo home_url(); ?>//wp-content/uploads/2022/10/ornamental-Iron.jpg);"></div>
+                <!-- <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="work-slider-box white-text">
@@ -165,12 +157,12 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="work-main-wp">
-                <div class="work-main-content" title="Entry Doors" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/JM_OtherWork_EntryDoors_New.jpg);"></div>
-                <div class="container">
+                <div class="work-main-content" title="Entry Doors" style="background-image: url(<?php echo home_url(); ?>//wp-content/uploads/2022/10/ornamental-Iron.jpg);"></div>
+                <!-- <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="work-slider-box white-text">
@@ -181,12 +173,12 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="work-main-wp security-doors-wp">
-                <div class="work-main-content" title="Security Doors" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/JM_OtherWor_SecurityDoors_Update.jpg);"></div>
-                <div class="container">
+                <div class="work-main-content" title="Security Doors" style="background-image: url(<?php echo home_url(); ?>//wp-content/uploads/2022/10/ornamental-Iron.jpg);"></div>
+                <!-- <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="work-slider-box white-text">
@@ -197,12 +189,12 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="work-main-wp">
-                <div class="work-main-content" title="Exterior Railings" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/JM_OtherWork_ExteriorRailing_New.jpg);"></div>
-                <div class="container">
+                <div class="work-main-content" title="Exterior Railings" style="background-image: url(<?php echo home_url(); ?>//wp-content/uploads/2022/10/ornamental-Iron.jpg);"></div>
+                <!-- <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="work-slider-box white-text">
@@ -213,12 +205,12 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="work-main-wp">
-                <div class="work-main-content" title="Interior Railings" style="background-image: url(<?php echo home_url(); ?>/wp-content/uploads/2021/04/JM_OtherWork_InteriorRailing_New.jpg);"></div>
-                <div class="container">
+                <div class="work-main-content" title="Interior Railings" style="background-image: url(<?php echo home_url(); ?>//wp-content/uploads/2022/10/ornamental-Iron.jpg);"></div>
+                <!-- <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="work-slider-box white-text">
@@ -229,28 +221,30 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>
 
 
     </div>
-</section><!-- end of Work Sec -->
+</section>
+<!-- end of Work Sec -->
 
-<div class="order-sec" >
-    <section class="cta-custom-work" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2021/03/JMIronWorks_Gallery_CustomFabrications_2.jpg');" id="custom-work">
+<div class="order-sec">
+    <section class="cta-custom-work back-img" id="custom-work">
+        <div class="back-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/10/email-bg.jpg');"></div>
         <div class="sec-wp">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 m-auto">
+                    <div class="col-lg-12 m-auto">
                         <div class="cta-custom-work-text text-center white-text">
-                            <h2 class="h2-title wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.2s">Our Custom Iron Work</h2>
+                            <h3 class="h3-title wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.2s">Join our growing team! </h3>
                             <div class="wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.3s">
-                                <p>We work iron in the traditional way: no prefabricated pieces, no computer-generated designs. Just tell us what you need and we'll build it! Any size and any style, each custom-made product blending beauty with function.</p>
+                                <p>Fill up the form below to apply, and we will get back to you shortly. </p>
                             </div>
                             <div class="wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.4s">
-                                <a title="Get an Estimate" href="javascript:void(0);" class="sec-btn estimate-btn" >Get an Estimate</a>
+                                <?php echo do_shortcode('[contact-form-7 id="290" title="Join Us"]'); ?>
                             </div>
                         </div>
                     </div>
@@ -259,44 +253,46 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
         </div>
     </section><!-- end of Cta Custom Work -->
 
-    <?php
-    get_template_part('template-parts/content', 'testimonial');
-    ?>
+    <section class="testimonials-sec" id="review">
+        <div class="back-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/10/testimonial-bg.jpg');"></div>
+        <div class="container">
+            <!-- <div class="testimonials-pattern pattern"></div> -->
+            <div class="row">
+                <div class="col-lg-12 wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="testimonials-slider">
+                        <?php
+                        $args = array(
+                            'post_type'  => 'testimonials',
+                            'numberposts' => -1,
+                            'post_status' => 'publish',
+                        );
+                        $reviews = get_posts($args);
+                        foreach ($reviews as $key => $value) {
+                        ?>
+                            <div class="testimonials-slider-box">
+                                <img class="quote-icon" src="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/images/quote.svg" width="79" height="57" alt="<?php echo $value->post_title; ?>">
+                                <div class="overflow-text" data-simplebar=""><?php echo wpautop($value->post_content); ?></div>
+                                <div class="tes-author">
+                                    <p><?php echo $value->post_title; ?></p>
+                                </div>
+                            </div>
+                        <?php  } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end of Testimonials Sec -->
+
 </div>
+
+<?php get_template_part('template-parts/content', 'deals'); ?>
 
 <section id="gallery-sec" class="photo-gallery">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="h2-title wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.2s">Photo Gallery</h2>
-                <div class="gallery-tab wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <button class="sec-btn tab-dropdown" type="button"> <span class="gallery-active-menu">Courtyard Gates</span><span class="caret"></span></button>
-                    <ul class="dropdown-tabbing">
-                        <?php
-                        $i = 1;
-                        if (have_rows('service_gallery')) {
-                            while (have_rows('service_gallery')) {
-                                the_row();
-                                $data_slug = strtolower(str_replace(" ", "-", get_sub_field('service_name')));
-                                if ($i == 1) {
-                                    $active_slug = $data_slug;
-                        ?>
-                                    <li class="gallery-active-tab" data-id="<?php echo $data_slug; ?>"><?php the_sub_field('service_name') ?></li>
-                                <?php
-                                } else {
-                                ?>
-                                    <li data-id="<?php echo $data_slug; ?>"><?php the_sub_field('service_name') ?></li>
-                        <?php
-                                }
-                                $i++;
-                            }
-                        }
-                        ?>
-                    </ul>
-                </div>
-
+                <h2 class="h2-title wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.2s">Gallery</h2>
                 <div class="gallery-masonry-box wow fadeup-animation" data-wow-duration="1s" data-wow-delay="0.4s">
-
                     <div class="gallery-masonry">
                         <?php
                         if (have_rows('service_gallery')) {
@@ -304,15 +300,14 @@ global $email , $phone_number , $phone_link,$address ,$facebook_link ,$instagram
                                 the_row();
                                 $data_slug = strtolower(str_replace(" ", "-", get_sub_field('service_name')));
                                 if ($data_slug == $active_slug) {
-                                    $gallery_counter=1;
+                                    $gallery_counter = 1;
                                     $gallery = get_sub_field('gallery_images');
-                                    foreach ($gallery as $key => $image) {
-                        ?>
-                                        <a title="<?php echo get_sub_field('service_name').' '.$gallery_counter; ?>" href="<?php echo $image['url']; ?>" data-fancybox="<?php echo $active_slug; ?>">
-                                            <img src="<?php echo $image['url']; ?>" data-no-lazy="1" alt="<?php echo get_sub_field('service_name').' '.$gallery_counter; ?>">
+                                    foreach ($gallery as $key => $image) { ?>
+                                        <a title="<?php echo get_sub_field('service_name') . ' ' . $gallery_counter; ?>" href="<?php echo $image['url']; ?>" data-fancybox="<?php echo $active_slug; ?>">
+                                            <img src="<?php echo $image['url']; ?>" data-no-lazy="1" alt="<?php echo get_sub_field('service_name') . ' ' . $gallery_counter; ?>">
                                         </a>
                         <?php
-                        $gallery_counter++;
+                                        $gallery_counter++;
                                     }
                                 }
                             }
