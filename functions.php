@@ -154,7 +154,7 @@ function jm_custom_scripts() {
 	wp_style_add_data( 'jm-custom-style', 'rtl', 'replace' );
 
 	
-	wp_enqueue_script( 'jm-custom-pooper', get_template_directory_uri() . '/assets/js/popper.min.js', array(), '20151215', true );
+	// wp_enqueue_script( 'jm-custom-pooper', get_template_directory_uri() . '/assets/js/popper.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'jm-custom-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'jm-custom-cookie', get_template_directory_uri() . '/assets/js/jquery.cookie.js', array(), '20151215', true );
 	wp_enqueue_script( 'jm-custom-font-awesome', get_template_directory_uri() . '/assets/js/font-awesome.min.js', array(), '20151215', true );
@@ -202,7 +202,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function global_link(){
-	global $email , $phone_number , $phone_link,$address,$address_link ,$facebook_link ,$instagram_link ,$twitter_link,$footer_content;
+	global $email , $phone_number , $phone_link,$address,$address_link ,$facebook_link ,$instagram_link ,$twitter_link,$footer_content,$footer_background_image;
 	$email = get_field('email','option');
 	$phone_number = get_field('phone','option');
 	//Phone link
@@ -217,7 +217,9 @@ function global_link(){
 	$instagram_link = get_field('instagram_link','option');		
 	$twitter_link = get_field('twitter_link','option');		
 
-	$footer_content = get_field('footer_content','option');		
+	$footer_content = get_field('footer_content','option');	
+	$footer_background_image = get_field('footer_background_image','option');		
+
 }
 add_action('init','global_link');
 
@@ -280,7 +282,6 @@ add_action( 'init', 'custom_testimonials_post' );
 
 add_action('wp_ajax_gallery_tabbing','gallery_image_tabbing');
 add_action( 'wp_ajax_nopriv_gallery_tabbing', 'gallery_image_tabbing' );
-
 function gallery_image_tabbing() {	
 	$active_slug =  $_POST['slug'];
 	if(have_rows('service_gallery',5)){
@@ -305,48 +306,48 @@ function gallery_image_tabbing() {
 
 
 
-add_action('wpcf7_before_send_mail', 'westwinds_dynamic_addcc');
+// add_action('wpcf7_before_send_mail', 'westwinds_dynamic_addcc');
 
-function westwinds_dynamic_addcc($WPCF7_ContactForm)
-{
-
-
-	if (17 == $WPCF7_ContactForm->id() || 150 == $WPCF7_ContactForm->id()) {
-
-		$currentformInstance  = WPCF7_ContactForm::get_current();
-		$contactformsubmition = WPCF7_Submission::get_instance();
-
-		if ($contactformsubmition) {
+// function westwinds_dynamic_addcc($WPCF7_ContactForm)
+// {
 
 
-			$mail = $currentformInstance->prop('mail');
-			if (isset($_POST['service-interested']) && !empty($_POST['service-interested'])) {
-				if($_POST['service-interested'] == "Spiral Staircases"){
-					$to_email = "jmcustomironworks@gmail.com";
-					$data = $contactformsubmition->get_posted_data();
-					if (empty($data))
-						return;
+// 	if (17 == $WPCF7_ContactForm->id() || 150 == $WPCF7_ContactForm->id()) {
+
+// 		$currentformInstance  = WPCF7_ContactForm::get_current();
+// 		$contactformsubmition = WPCF7_Submission::get_instance();
+
+// 		if ($contactformsubmition) {
+
+
+// 			$mail = $currentformInstance->prop('mail');
+// 			if (isset($_POST['service-interested']) && !empty($_POST['service-interested'])) {
+// 				if($_POST['service-interested'] == "Spiral Staircases"){
+// 					$to_email = "jmcustomironworks@gmail.com";
+// 					$data = $contactformsubmition->get_posted_data();
+// 					if (empty($data))
+// 						return;
 						
-					if (!empty($to_email)) {
-						$mail['recipient'] = $to_email;
-					}
+// 					if (!empty($to_email)) {
+// 						$mail['recipient'] = $to_email;
+// 					}
 
-					// Save the email body
-					$currentformInstance->set_properties(array(
-						"mail" => $mail
-					));
-				}
-			}
+// 					// Save the email body
+// 					$currentformInstance->set_properties(array(
+// 						"mail" => $mail
+// 					));
+// 				}
+// 			}
 			
-			/* -------------- */
+// 			/* -------------- */
 
-			// saparate all emails by comma.
-			//$cclist = implode(', ', $cc_email);
+// 			// saparate all emails by comma.
+// 			//$cclist = implode(', ', $cc_email);
 
 			
 
-			// return current cf7 instance
-			return $currentformInstance;
-		}
-	}
-}
+// 			// return current cf7 instance
+// 			return $currentformInstance;
+// 		}
+// 	}
+// }

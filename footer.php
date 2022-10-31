@@ -9,28 +9,27 @@
  *
  * @package JM_Custom
  */
-global $email, $phone_number, $phone_link, $address, $address_link, $facebook_link, $instagram_link, $twitter_link, $footer_content;
+global $email, $phone_number, $phone_link, $address, $address_link, $facebook_link, $instagram_link, $twitter_link, $footer_content,$footer_background_image;
 ?>
 
-<footer class="site-footer" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/10/footer-bg.jpg');">
+<footer class="site-footer" style="background-image: url('<?php echo $footer_background_image; ?>');">
 	<div class="sec-wp">
 		<div class="container">
 			<div class="top-footer">
+				<div class="footer-pattern pattern"></div>
 				<div class="row">
-					<div class="col-lg-6 wow right-animation" data-wow-duration="1s" data-wow-delay="0.2s" id="contact">
+					<div class="col-lg-6" id="contact">
 						<div class="contact-form white-text">
 							<div class="contact-title">
-								<h2 class="h2-title">contact us</h2>
+								<h4 class="h4-title">contact us</h4>
 							</div>
 							<?php echo do_shortcode('[contact-form-7 id="17" title="Contact form"]'); ?>
 						</div>
 					</div>
-					<div class="col-lg-6 wow left-animation" data-wow-duration="1s" data-wow-delay="0.3s">
+					<div class="col-lg-6">
 						<div class="footer-about">
 							<div class="footer-logo">
-								<!-- <a title="JM Custom Iron Work" href="<?php echo home_url(); ?>"><img src="<?php echo home_url(); ?>/wp-content/uploads/2021/03/footer-logo.png" alt="JM Custom Iron Work"></a> -->								
 								<?php the_custom_logo(); ?>
-								<!-- <span>Jacobs Fencing, LLC</span> -->
 							</div>
 							<div class="footer-text white-text">
 								<?php echo $footer_content; ?>
@@ -70,7 +69,7 @@ global $email, $phone_number, $phone_link, $address, $address_link, $facebook_li
 						</div>
 
 						<div class="copyright">
-							<div class="footer-bottom-link  wow fadeup-animation" data-wow-duration="0.8s" style="visibility: visible; animation-duration: 0.8s; animation-name: fadeup-animation;">
+							<div class="footer-bottom-link">
 								<ul>
 									<li>
 										<p>©<?php echo date('Y') ?> Jacobs Fencing</p>
@@ -80,7 +79,7 @@ global $email, $phone_number, $phone_link, $address, $address_link, $facebook_li
 									<li><a href="<?php echo home_url(); ?>/cookie-policy/" title="Cookie Policy">Cookie Policy</a></li>
 								</ul>
 							</div>
-							<div class="copyright-right-text  wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeup-animation;">
+							<div class="copyright-right-text">
 								<p>Web Design &amp; Digital Marketing with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://www.dotcomdesign.com" target="_blank" title="Dotcom Design" class="dotcom-link">Dotcom Design</a></p>
 							</div>
 						</div>
@@ -92,24 +91,6 @@ global $email, $phone_number, $phone_link, $address, $address_link, $facebook_li
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
-<div class="modal center-modal-view" id="getEstimate">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-
-			<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-			<div class="modal-body overflow-text" data-simplebar="">
-				<div class="contact-title">
-					<h2 class="h2-title">contact us</h2>
-					<p>Please include a picture of your preferred design along with rough dimensions to expedite the quoting process. Thank you!</p>
-				</div>
-				<?php echo do_shortcode('[contact-form-7 id="150" title="Get an Estimate form"]'); ?>
-			</div>
-
-
-		</div>
-	</div>
-</div>
 <?php wp_footer(); ?>
 
 <a title="<?php echo $phone_number; ?>" href="tel:<?php echo $phone_link; ?>" class="sec-btn cta-btn">Call &nbsp;<span class="callus"><?php echo $phone_number; ?></span></a>

@@ -10,6 +10,7 @@
  * @package JM_Custom
  */
 global $email, $phone_number, $phone_link, $facebook_link, $instagram_link, $twitter_link;
+
 ob_start();
 session_start();
 ?>
@@ -22,7 +23,6 @@ session_start();
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	<link rel="preload" href="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="<?php echo home_url(); ?>/wp-content/themes/jm-custom/assets/fonts/PlayfairDisplay-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -58,9 +58,8 @@ session_start();
 									<div class="header-contact-info for-mob footer-info">
 										<ul>
 											<li><a title="<?php echo $email; ?>" href="mailto:<?php echo $email; ?>"><i class="fab fa-telegram-plane" aria-hidden="true"></i> <?php echo $email; ?></a></li>
-											<li><a title="<?php echo $phone_number; ?>" href="tel:<?php echo $phone_link; ?>"><i class="fas fa-phone-alt" aria-hidden="true"></i> <?php echo $phone_number; ?></a></li>
+											<li><a title="<?php echo $phone_number; ?>" href="tel:<?php echo $phone_link; ?>"><i class="fas fa-phone-alt" aria-hidden="true"></i><span class="callus"><?php echo $phone_number; ?></span></a></li>
 										</ul>
-										<a href="javascript:void(0);" class="sec-btn" data-toggle="modal" data-target="#getEstimate" title="Get an Estimate">Get an Estimate</a>
 										<div class="header-mob-pattern pattern for-mob"></div>
 									</div>
 								</div>

@@ -11,7 +11,6 @@ jQuery(document).ready(function ($) {
 		jQuery(".gallery-tab li").removeClass("gallery-active-tab");
 		jQuery(this).addClass("gallery-active-tab");
 		jQuery(".gallery-loader").css("display", "flex");
-
 		currentRequest = $.ajax({
 			type: "POST",
 			url: custom_call.ajaxurl,
@@ -34,7 +33,29 @@ jQuery(document).ready(function ($) {
 		});
 		jQuery("body .dropdown ul").removeAttr("style");
 	});
-
+	/** Home Page Other Work Section SLider */
+	jQuery(".other-work-slider").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		dots: true,
+		arrows: true,
+		autoplay: false,
+		autoplaySpeed: 8000,
+		rows: 0,
+		customPaging: function (slider, i) {
+			return jQuery(slider.$slides[i])
+				.find(".work-main-content")
+				.attr("title");
+		},
+		appendDots: jQuery(".work-tab"),
+		dotsClass: "dropdown-tabbing",
+		adaptiveHeight: true,
+		prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
+		nextArrow: '<button class="slide-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>',
+	});
+	$first_li =jQuery(".dropdown-tabbing li:first").text();
+	jQuery(".work-sec .gallery-active-menu").text($first_li);
 	/**Other Work Button Text Chnage JS */
 	jQuery(".other-work-slider").on(
 		"afterChange",
@@ -80,6 +101,7 @@ jQuery(document).ready(function ($) {
 		dots: true,
 		arrows: true,
 		autoplay: false,
+		swipeToSlide: true,
 		autoplaySpeed: 4000,
 		rows: 0,
 		prevArrow:'<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
@@ -90,32 +112,13 @@ jQuery(document).ready(function ($) {
 				settings: {
 					dots: true,
 					rows: 0,
+					arrows:false
 				},
 			},
 		],
 	});
 
-	/** Home Page Other Work Section SLider */
-	jQuery(".other-work-slider").slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		infinite: true,
-		dots: true,
-		arrows: true,
-		autoplay: true,
-		autoplaySpeed: 8000,
-		rows: 0,
-		customPaging: function (slider, i) {
-			return jQuery(slider.$slides[i])
-				.find(".work-main-content")
-				.attr("title");
-		},
-		appendDots: jQuery(".work-tab"),
-		dotsClass: "dropdown-tabbing",
-		adaptiveHeight: true,
-		prevArrow: '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
-		nextArrow: '<button class="slide-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>',
-	});
+
 
 	/**Home Page Tabbing to Dropdown JS */
 	function myFunction(x) {
@@ -135,10 +138,8 @@ jQuery(document).ready(function ($) {
 			});
 			jQuery("body").on("click",".tab-dropdown",function(){
 				if(!jQuery(".overlay").hasClass('hidden')){
-					console.log("tab in if");
 					jQuery(".overlay").addClass('hidden');
 				}else{
-					console.log("tab in if else");
 					jQuery(".overlay").removeClass('hidden');
 				}
 				jQuery(this).parent().toggleClass('active-dropdown');
@@ -159,19 +160,6 @@ jQuery(document).ready(function ($) {
 	myFunction(x); // Call listener function at run time
 	x.addListener(myFunction);
 
-	/* Scroll To Top JS */
-	// jQuery(window).scroll(function () {
-	// 	if (jQuery(this).scrollTop() > 100) {
-	// 		jQuery("#scrollToTop").fadeIn();
-	// 	} else {
-	// 		jQuery("#scrollToTop").fadeOut();
-	// 	}
-	// });
-	// jQuery("#scrollToTop").click(function () {
-	// 	jQuery("html, body").animate({scrollTop: 0}, 600);
-	// 	return false;
-	// });
-
 	/* Sticky Header JS */
 	jQuery(window).scroll(function () {
 		// this will work when your window scrolled.
@@ -184,32 +172,12 @@ jQuery(document).ready(function ($) {
 	});
 
 	/* Mobile Menu JS */
-	jQuery("#primary-menu .menu-item a").click(function () {
+	jQuery("#primary-menu .menu-item a").not(".menu-item-has-children  a:first").click(function () {
 		jQuery("#site-navigation").removeClass("toggled");
 	});
-
-		/*Quotr Modal JS */
-		jQuery(".center-modal-view").on("show.bs.modal", function () {
-			var scrolly = window.scrollY;
-			jQuery("body").css("top", "-" + scrolly + "px");
-			jQuery(this).attr("data-top", scrolly);
-		});
-		jQuery(".center-modal-view").on("hidden.bs.modal", function () {
-			var scrolly = jQuery(this).attr("data-top");
-			jQuery("body").css("top", "0px");
-			window.scrollTo(0, scrolly);
-		});
-
-	/* SEO Page Read More JS */
-	jQuery("#read-more").click(function () {
-		jQuery(".excerpt-content").css({"max-height": "unset"});
-		jQuery(this).hide();
-	});
-
-	/*SEO Menu JS */
-	jQuery("#view_all_services").click(function () {
-		jQuery(".all-services").slideToggle(500);
-		jQuery(".all-services").css("display", "block");
+	jQuery('body').on('click','.menu-toggle',function () {
+		jQuery(".sub-menu").css('display', 'none');
+		jQuery(".menu-item-has-children").removeClass("active-sub-menu");
 	});
 });
 
@@ -217,12 +185,25 @@ jQuery(document).ready(function ($) {
 jQuery(window).on("load resize", function () {
 	var window_size = jQuery(window).width();
 	if (window_size <= 991) {
+		jQuery("#menu-item-15 a").first().attr('href', 'javascript:void(0);');
+		jQuery(".menu-item-has-children").removeClass('active-sub-menu');
+		jQuery(".sub-menu").css('display', 'none');
+		jQuery('body').on('click', '#primary-menu .menu-item-has-children a', function() {
+            if ((jQuery(this).parents('.menu-item-has-children').hasClass('active-sub-menu'))) {
+                jQuery(this).parents('.menu-item-has-children').removeClass('active-sub-menu');
+                jQuery(this).parents('.menu-item-has-children').find('.sub-menu').css('display', 'none');
+            } else {
+                jQuery(".menu-item-has-children").removeClass('active-sub-menu');
+                jQuery(".sub-menu").css('display', 'none');
+                jQuery(this).parents('.menu-item-has-children').addClass('active-sub-menu');
+                jQuery(this).parents('.menu-item-has-children').find('.sub-menu').css('display', 'block');
+            }
+        });
 		gallery_slider();
 		/* CTA button JS */
 		jQuery(window).scroll(function () {
 			var window_size_scroll = jQuery(window).width();
 			if(window_size_scroll <= 991){
-
 				if (jQuery(this).scrollTop() > 100) {
 					jQuery(".cta-btn").fadeIn();
 					jQuery(".cta-btn").css("display","inline-flex");
@@ -253,6 +234,7 @@ function gallery_slider() {
 			autoplaySpeed: 4000,
 			rows: 2,
 			adaptiveHeight: true,
+			swipeToSlide: true,
 			prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
 			nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
 		});
